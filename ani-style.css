@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+}
+.stage{
+    background-color: green;
+    height: 400px;
+    width: 80%;
+    border-radius: 40%;
+    border: 2px solid rebeccapurple;
+    
+}
+
+.pitch{
+    background-color: #efbe95;
+    height: 65px;
+    width: 35%;
+    top: 30%;
+    left: 25%;
+    position: fixed;
+    z-index: 1;
+}
+
+.bat img{
+    z-index: 12;
+    position: fixed;
+    height: 35%;
+    top: 5%;
+    left: 20%;
+    transform-origin: 55% 30%;
+    transition: transform .5s ease-in .2s;
+}
+
+.stage:hover .bat img{
+    transform: rotate(-50deg);
+}
+
+.ball{
+    height: 50px;
+    width: 50px;
+    border-radius:50%;
+    background-color: red;
+    position: relative;
+    top: -125%;
+    left: 100%;
+}
+
+    @keyframes ball-move{
+        0%{
+            top:-80%;
+            left: 100%;
+        }
+        25%{
+            top:0%;
+            left: 50%;
+        }
+        50%{
+            top: -30%;
+            left: 30%;
+        }
+        75%{
+            /* top: -30%;
+            left: 67%; */
+        }
+        100%{
+            top: -150px;
+            left: 750px;
+        }
+
+
+    }
+    .stage:hover .ball{
+        animation-name: ball-move;
+        animation-duration: 1s;
+        animation-delay: .3s;
+    }
+
+    .um-img{
+        position: fixed;
+        left: 540px;
+        top: 117px;
+        height: 25%;
+        z-index: 199;
+        opacity: 0;
+        /* visibility: hidden; */
+        /* animation: fade-in .3s ease 1.5s; */
+    }
+
+    .stage:hover .um-img{
+        animation: fade-in .7s ease-in 1.2s; 
+       
+    }
+
+
+    @keyframes fade-in{
+        0%{
+            opacity: 0;
+        }
+        25%{
+            opacity: .25;
+            visibility: visible;
+        }
+        50%{
+            opacity: .5;
+            visibility: visible;
+        }
+        75%{
+            opacity: .75;
+            visibility: visible;
+        }
+        100%{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
